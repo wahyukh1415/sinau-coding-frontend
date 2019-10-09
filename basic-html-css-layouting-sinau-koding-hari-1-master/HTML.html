@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Halaman HTML</title>
+        <style>
+            html,
+            body, 
+            div {
+                padding: 0;
+                margin:0;
+                font-family: sans-serif;
+            }
+
+
+            #header {
+                background-color: black;
+                padding: 18px;
+                margin: auto;
+            }
+
+            #header p {
+                margin:16x 0;
+            }
+
+            #header p {
+                color: white;
+                font-size: 45px;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            #nav {
+                background-color: grey;
+            }
+
+            #nav ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            #nav ul li {
+                padding: 15px 20px;
+                display: inline-block;
+                border-right: 1px solid black;
+            }
+
+            #nav ul li a{
+                color: white;
+                text-decoration: none;
+            }
+
+            #content-wrapper {
+                display: block;
+                overflow: auto;
+            }
+
+            #content-wrapper #main-content{
+                width: 70%;
+                float: left;
+                box-sizing: border-box;
+                padding: 16px;
+            }
+
+            #content-wrapper #main-content .post-item{
+                display: block;
+                overflow: auto;
+                border-bottom: 1px solid grey;
+                padding : 15px 0; 
+            }
+
+            #content-wrapper #main-content .post-item .post-image{
+                width: 20%;
+                height: auto;
+                float: left;
+                box-sizing: border-box;
+                padding-right: 15px;
+            }
+
+            #content-wrapper #main-content .post-item .post-image img{
+                width: 100%;
+            }
+
+            #content-wrapper #main-content .post-item .post-content{
+                width: 70%;
+                float: left;
+            }
+
+            #content-wrapper #main-content .post-item .post-content p {
+                font-size: 14px;
+            }
+
+            #content-wrapper #main-content .post-item .post-content a {
+                text-decoration: none;
+                color: orange;
+            }
+
+            #content-wrapper #main-content .post-item .post-content h4{
+                margin-top: 0;
+                margin-bottom: 15px;
+            } 
+
+            #content-wrapper #sidebar{
+                width: 30%;
+                float: left;
+                background-color: gainsboro;
+                box-sizing: border-box;
+                padding: 16px;
+            }
+
+            #content-wrapper #sidebar p{
+                margin-top: 0;
+                border-bottom: 1px solid black;
+            }
+
+            #content-wrapper #sidebar-links ul{
+                list-style: none;
+                padding-left: 0;
+            }
+
+            #content-wrapper #sidebar-links ul li{
+                margin-bottom: 15px;
+            }
+
+            #content-wrapper #sidebar-links ul li a{
+                color: orange;
+                text-decoration: none;
+            }
+
+            #footer {
+                background-color:black;
+                padding: 1px;
+                margin: auto;
+            }
+
+            #footer p{
+                color: white;
+                text-align: center;
+            }
+
+            #footer span{
+                color: orange;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="header">
+            <p>SINAU CODING</p>
+        </div>
+        
+        <div id="nav">
+            <ul>
+                <!-- untuk multiple alt + tulisan-->
+                <!-- link (li>a)*5 -->
+                <li><a href="file:///F:/Bootcamp/basic-html-css-layouting-sinau-koding-hari-1-master/index.html">HTML</a></li>
+                <li><a href="a">CSS</a></li>
+                <li><a href="a">JAVASCRIPT</a></li>
+                <li><a href="a">PHP</a></li>
+                <li><a href="a">BOOTSTRAP</a></li>
+            </ul>
+        </div>
+
+        <div id="content-wrapper">
+                <div id="main-content">
+                        <div class="post-item">
+                            <div class="post-image">
+                                    <img src="HTML.png" alt="HTML">
+                            </div>
+                            <div class="post-content">
+                                <h2>HTML (Hyper Text Markup Language)</h2>
+                                    <p>
+                                            HTML adalah kependekan dari Hyper Text Markup Language, yaitu sebuah bahasa markup yang digunakan untuk membuat sebuah halaman web. 
+                                            HTML inilah yang menyusun sebuah halaman web menjadi sebagaimana yang kita lihat melalui browser (penjelajah internet). 
+                                            belajar HTML dan mengerti bagaimana cara HTML bekerja akan sangat penting jika kamu ingin terjun ke dunia web development.
+                                    </p>
+                                    <p>
+                                            Sebenernya ketika bekerja dalam menampilkan dan menyusun sebuah halaman web HTML ini tidak sendiri, 
+                                            dia juga dibantu oleh teman-temannya yang lain yaitu CSS dan JavaScript. 
+                                            HTML sendiri bertugas menyusun kerangka halaman web, CSS yang akan merapihkan dan memperindah tampilan halaman web, 
+                                            sedangkan JavaScript-lah yang bertugas membuat halaman web menjadi lebih interaktif. 
+                                    </p>
+                            </div>      
+                        </div>
+
+                </div>
+        
+
+            <div id="sidebar">
+                <p> <b> Sidebar Link </b></p>
+                <div id="sidebar-links">
+                    <ul>
+                        <li><a href="a">HTML</a></li>
+                        <li><a href="a">CSS</a></li>
+                        <li><a href="a">JAVASCRIPT</a></li>
+                        <li><a href="a">PHP</a></li>
+                    </ul>
+                </div>
+
+                <p><b> Other Widget</b></p>
+                <div id="sidebar-description">
+                        front-end adalah sebuah bagian yang langsung dilihat oleh user. 
+                        User juga bisa langsung berinteraksi pada bagian ini.
+                </div>
+            </div>
+
+        </div>
+
+            <div id="footer">
+                <p>Copyright <span>your site.</span> All right reserved</p>
+            </div>  
+    </body>
+</html>
