@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Belajar Bootstrap</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <style>
+            html,
+            body, 
+            div {
+                padding: 0;
+                margin:0;
+                font-family: sans-serif;
+            }
+            
+            .media img {
+                width :100px;
+            }
+
+            .container-fluid .media{
+                border-bottom: 1px solid black;
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+
+            .container-fluid .col-9{
+                background-color: white;
+            }
+
+            .container-fluid .col-3{
+                background-color:gainsboro;
+            }
+
+            .jumbotron h1{
+                color: white;
+            }
+
+            .jumbotron p{
+                color: white;
+            }
+
+            .jumbotron {
+                background-color: black;
+                padding: 2rem 1rem;
+                margin-bottom: 0;
+                
+            }
+            
+            .nav {
+                background-color: grey;
+            }
+
+            .nav a{
+                color: gainsboro; 
+                margin-left: 10px;
+            }
+
+            .list-group-item {
+                background-color: gainsboro;
+            }
+
+            .side-link ul li{
+                border: none;
+            }
+
+            .side-link ul li a{
+                color: orange;
+            }
+
+            .page-footer {
+                background-color: black;
+            }
+
+            .page-footer p{
+                color: white;
+            }
+
+            .page-footer a{
+                color: orange;
+            }
+
+        
+
+        </style>
+
+    </head>
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Belajar Bootstrap</h1>
+              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+    </div>
+
+    <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link 4</a>
+            </li>
+    </ul>
+
+    <body>
+        <!-- kelas kolom default -->
+            <div class="container-fluid">
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-9">
+                                <div class="media">
+                                        <img class="mr-3" src="HTML.png" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                          <h5 class="mt-0">CSS</h5>
+                                          Hypertext Markup Language adalah sebuah bahasa markah yang digunakan untuk membuat sebuah halaman web, 
+                                          menampilkan berbagai informasi di dalam sebuah penjelajah web Internet dan pemformatan hiperteks sederhana 
+                                          yang ditulis dalam berkas format ASCII agar dapat menghasilkan tampilan wujud yang terintegerasi.
+                                            <a href="a">Read More</a>
+                                        </div>
+                                </div>
+
+                                <div class="media">
+                                        <img class="mr-3" src="css.png" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                          <h5 class="mt-0">CSS</h5>
+                                            Cascading Style Sheet merupakan aturan untuk mengatur beberapa komponen 
+                                            dalam sebuah web sehingga akan lebih terstruktur dan seragam. 
+                                            CSS bukan merupakan bahasa pemograman.
+                                            <a href="a">Read More</a>
+                                        </div>
+                                </div>
+
+                                <div class="media">
+                                        <img class="mr-3" src="js.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                          <h5 class="mt-0">CSS</h5>
+                                          JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. 
+                                          JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer 
+                                          seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. 
+                                          Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT.
+                                            <a href="a">Read More</a>
+                                        </div>
+                                </div>
+
+
+                        </div>
+
+                        <div class="col-3" > 
+                            <div><h5>Sidebar</h5></div>
+                            <div class="side-link">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="a">Link 1</a></li>
+                                    <li class="list-group-item"><a href="a">Link 2</a></li>
+                                    <li class="list-group-item"><a href="a">Link 3</a></li>
+                                    <li class="list-group-item"><a href="a">Link 4</a></li>
+                                    <li class="list-group-item"><a href="a">Link 5</a></li>
+                                </ul>
+                            </div>
+
+                            <h5>Other Widget</h5>
+                            <p>
+                                    This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+    <!-- Footer -->
+<footer class="page-footer font-small">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1">
+            <p>Copyright <a href="a"> Your Site</a> All Right reserved</p>
+          
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+
+</html>
