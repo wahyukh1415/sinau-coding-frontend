@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+            <script
+                src="https://code.jquery.com/jquery-3.4.1.min.js">
+            </script>
+
+            <p name="demo" id="demo" class="demo">
+                    Click The button
+            </p>
+
+            <button>byId</button>
+            <button>byName</button>
+            <button>byClassName</button>
+            <button>byTagName</button>
+        
+    <body>
+
+        <script>
+            function byId(){
+            //     document.getElementById("demo").innerHTML="getElementById";
+
+                var demoJquery =$("#demo")
+                demoJquery.html("getElementById")
+            }
+
+            function byClassName(){
+                // var x = document.getElementsByClassName("demo");
+                // x[0].innerHTML = "getElementByClassName";
+
+                var demoJquery =$(".demo")
+                demoJquery.html("getElementsByClassName")
+            }
+
+            function byName(){
+                // var Demos = document.getElementsByName("demo");
+                // document.getElementById("demo").innerHTML="getElementByName";
+
+                var demoJquery =$("name=demo")
+                demoJquery.html("getElementsByName")
+            }
+
+            function byTagName(){
+                // var list = document.getElementsByTagName("p");
+                // list.getElementsByTagName("p").innerHTML = "getElementbyTagName";
+
+                var demoJquery =$("p")
+                demoJquery.html("getElementsByTagName")
+
+            }
+
+            $("button:eq(0)").click(byId);
+            $("button:eq(1)").click(byName);
+            $("button:eq(2)").click(byClassName);
+            $("button:eq(3)").click(byTagName);
+        </script>
+            
+            
+    </body>
+</html>

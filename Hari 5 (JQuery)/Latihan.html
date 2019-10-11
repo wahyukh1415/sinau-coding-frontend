@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="Demo" name="Demo">
+            Click The button
+        </p>
+        <button onclick="byId()">Try it button</button>
+
+        <p id="Demo1" name="Demo1">
+                Click The button getByName
+            </p>
+        <button onclick="byName()">Try it button</button>
+
+        <p>
+            <div class="example">Click The Button getElementsByClassName.</div>
+        </p>
+        
+        <button onclick="byClassName()">Try it Button </button>
+        
+        <ul>
+                <li> Click The Button getElementByTagName</li>
+        </ul>
+            
+        <button onclick="byTagName()">Try it Button</button>
+
+        
+        <p>Click the button to create a Parent element with Child.</p>
+
+        <button onclick="myAppendChild1()">Try it </button>
+
+        <p>Click the button to create a P element with some text, and append it to Parrent.</p>
+
+            <div id="myParrent">
+            A Parrent element
+            </div>
+
+        <button onclick="myAppendChild2()">Try it</button>
+        
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+        
+            function byId(){
+                document.getElementById("Demo").innerHTML="getElementById";
+            }
+
+            function byClassName(){
+                var x = document.getElementsByClassName("example");
+                x[0].innerHTML = "getElementByClassName";
+            }
+
+            function byName(){
+                var Demos = document.getElementsByName("Demo1");
+                document.getElementById("Demo1").innerHTML="getElementByName";
+            }
+
+            function byTagName(){
+                var list = document.getElementsByTagName("UL")[0];
+                list.getElementsByTagName("LI")[0].innerHTML = "getElementbyTagName";
+
+            }
+
+            function myAppendChild1() {
+                var h = document.createElement("Parent");
+                var t = document.createTextNode("Child ");
+                h.appendChild(t);
+                document.body.appendChild(h);
+                }
+            
+            function myAppendChild2() {
+                var para = document.createElement("P");
+                para.innerHTML = "This is a paragraph.";
+                document.getElementById("myParrent").appendChild(para);
+            }
+
+        </script>
+         
+    </body>
+</html>

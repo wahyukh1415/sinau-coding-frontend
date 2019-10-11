@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var array = ["A" , "B"];
+
+            array.forEach(function(item,index) {
+                console.log("foreach",index+1,item);
+            });
+
+            var i=0;
+            while(i < array.length) {
+                console.log("while",i+1,array[i]);
+                i++
+            }
+
+            var j;
+            for (j=0;j < array.length;j++){
+                console.log("for",j+1, array[j]);
+            }
+
+            array[0]="Z";
+            console.log(array)
+
+            array.splice(1,2, "Lemon", "kiwi")
+            console.log(array)
+
+            var motor = {Jenis:"BMW", Type:"R90", Mesin:1200};
+            console.log(motor)
+            console.log(motor.Jenis);
+            
+            var JenisMotor=["BMW","Ducati","Kawasaki"]
+            JenisMotor.splice(1,2,"Honda","Yamaha")
+            console.log(JenisMotor)
+
+            JenisMotor.push("Viar")
+            console.log(JenisMotor)
+
+            var Mobils=[];
+
+            var Mobil ={
+                Merk:"Tesla"
+            };
+
+            var Mobil1={
+                Merk:"Honda"
+            }
+
+            var Mobil2={
+                Merk:"Suzuki"
+            }
+
+            Mobils.push(Mobil);
+            console.log("Mobil yang berhasil ditambah",JSON.stringify(Mobils));
+
+            Mobils.push(Mobil1);
+            console.log("Mobil yang berhasil ditambah",JSON.stringify(Mobils));
+
+            Mobils.push(Mobil1);
+            console.log("Mobil yang berhasil ditambah",JSON.stringify(Mobils));
+
+            var indexEditMobil= Mobils.findIndex(function(Mobil3){
+                return Mobil3.Merk == "Tesla";
+            });
+
+            var editMobil =Mobils[indexEditMobil];
+            editMobil.Merk ="BMW";
+
+            console.log("Hasil Edit",JSON.stringify(Mobils))
+
+
+
+        </script>
+    </body>
+</html>
