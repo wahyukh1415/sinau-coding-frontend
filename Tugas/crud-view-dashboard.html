@@ -101,6 +101,11 @@ div {
   
   }
 
+  .container-fluid img{
+            width: 120px;
+            margin: auto;
+    }
+
 </style>
 
 <head>
@@ -117,11 +122,33 @@ div {
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb mb-2">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Content</li>
+      <li class="breadcrumb-item active" aria-current="page">dashboard</li>
     </ol>
   </nav>
 
 <body>
+  
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+
           <div class="container-fluid mt-0 mb-2 shadow">
               <div class="d-flex container-wrp"> 
                      <div class="sidebar-content">
@@ -141,7 +168,7 @@ div {
                                      </a>
                                  </li>
                                  <li class="list-group-item border-0">
-                                         <a href="a" class="d-flex align-item-center">
+                                         <a href="file:///F:/Bootcamp/Tugas/crud-view.html" class="d-flex align-item-center">
                                          <span class="mr-2">
                                              <i class="material-icons">note_add</i>
                                          </span>
@@ -187,61 +214,16 @@ div {
                          <h5 class="mb-4 mr-3 ml-3"> Welcome to IContent+</h5>
                          <div class="container-fluid">
 
-                            <div class="row">
-                                <div class=" col-4">
-                                    <div class="shadow p-4 mb-4 bg-white rounded">
-                                        <div class="d-flex align-item-center justify-content-center mb-4">
-                                            <h5 class="flex-fill">Content</h5>
-                                            <a class="btn btn-success btn-sm">
-                                                <i class="material-icons text-white">post_add</i>
-                                            </a>
-    
-                                        </div>
-                                        <h2 class="mb-4">32 Content</h2>
-                                        <div class="d-flex align-item-center">
-                                            <i class="material-icons mr-2 text-danger">arrow_downward</i>
-                                            <span>5.27% </span>
-                                            <span> Since Last Month</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div class="col-4">
-                                <div class="shadow p-4 mb-4 bg-white rounded">
-                                    <div class="d-flex align-items-center justify-content-center mb-4">
-                                        <h5 class="flex-fill">Viewers</h5>
-                                        <a class="btn btn-info btn-sm">
-                                            <i class="material-icons mr-2 text-white">people_alt</i>
-                                        </a>
-                                    </div>
-                                    <h2 class="mb-4">250 Viewers</h2>
-                                    <i class="material-icons text-success">arrow_upward</i>
-                                    <span>5.27%</span>
-                                    <span>Since last Month</span>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="shadow p-4 mb-4 bg-white rounded">
-                                    <div class="d-flex align-items-center justify-content-center mb-4">
-                                        <h5 class="flex-fill">Like</h5>
-                                        <a class="btn btn-primary">
-                                            <i class="material-icons text-white">tag_faces</i>
-                                        </a>
-                                    </div>
-                                    <h2 class="mb-4">250 Likes</h2>
-                                    <div class="d-flex align-item-center">
-                                        <i class="material-icons mr-2 text-success">arrow_upward</i>
-                                        <span>5.27% </span>
-                                        <span>Since last month</span>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-
                           <div class="row">
                             <div class="col">
-                                <button class="btn btn-secondary shadow" type="button" style="justify-content: flex-start;" onclick="addRow()">
-                                    Add
-                                </button>
+                              <span>Sort</span>
+                              <span>
+                                  <select id="select">
+                                        <option value="">5</option>
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                    </select>
+                              </span>
                             </div>
                             <div class="col">
                                 <form class="form-inline mb-4" style="justify-content: flex-end;">
@@ -253,17 +235,69 @@ div {
                          </div>
 
 
-                  <div class="container-fluid d-flex align-item-center shadow rounded">  
-                      <table class="table table-bordered mt-2">
-                        <thead style="background-color: #00c7eb; text-align: center;">
-                          <tr>
-                            <th>Id</th>
-                            <th>Content</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody id="table-data"></tbody>
-                      </table>
+                  <div class="container-fluid flex-fill shadow rounded">  
+                      <div class="row">
+                          <div class="col mb-2 mt-2">
+                              <div class="bg-primary p-4 mb-4 text-center rounded shadow">
+                                  <img src="account_circle.png" alt="">
+                                  <h5 class="text-white mb-4">Egy</h5>
+                                  <button class="btn btn-outline-light">View Profil</button>
+                              </div>
+                              <div class="card shadow">
+                                  <div class="card-header">
+                                      Content
+                                  </div>
+                                  <div class="card-body">
+                                      <h5 class="card-tittle">Special title treatment</h5>
+                                      <p class="card-text">With support text below as a natural lead-in to content.</p>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                              Buka
+                                            </button>
+                                  </div>
+                              </div>
+                          </div>
+
+                      <div class="col mb-2 mt-2">
+                          <div class="bg-secondary p-4 mb-4 text-center rounded shadow">
+                              <img src="account_circle.png" alt="">
+                              <h5 class="text-white mb-4">Tirmidzi</h5>
+                              <button class="btn btn-outline-light">View Profil</button>
+                          </div>
+                          <div class="card shadow">
+                              <div class="card-header">
+                                  Content
+                              </div>
+                              <div class="card-body">
+                                  <h5 class="card-tittle">Special title treatment</h5>
+                                  <p class="card-text">With support text below as a natural lead-in to content.</p>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                          Buka
+                                        </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col mb-2 mt-2">
+                          <div class="bg-danger p-4 mb-4 text-center rounded shadow">
+                              <img src="account_circle.png" alt="">
+                              <h5 class="text-white mb-4">Fauzy</h5>
+                              <button class="btn btn-outline-light">View Profil</button>
+                          </div>
+                          <div class="card shadow">
+                              <div class="card-header">
+                                  Content
+                              </div>
+                              <div class="card-body">
+                                  <h5 class="card-tittle">Special title treatment</h5>
+                                  <p class="card-text">With support text below as a natural lead-in to content.</p>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                          Buka
+                                        </button>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      </div>
                   </div>
                          
                  </div>
