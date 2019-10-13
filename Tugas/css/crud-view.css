@@ -1,0 +1,48 @@
+    table {
+        width: 100%;
+    }
+
+    table thead th {
+        text-align: left;
+    }
+
+    table tbody td {
+        width: 70%;
+    }
+
+    table tbody td:first-child {
+        width: 10%;
+    }
+
+    table tbody td:last-child {
+        width: 20%;
+    }
+
+    table tbody td.empty {
+        width: 100%;
+        text-align: center;
+    }
+
+    table tbody input {
+        width: 90%;
+    }
+
+    table tbody button {
+        margin-right: 10px;
+    }
+
+    button {
+        min-width: 80px;
+    }
+
+    .button-add {
+        margin-bottom: 20px;
+    }
+    
+
+    /** Sembunyikan button dan input edit */
+    .button-cancel:not(.always-show),
+    .button-save:not(.always-show),
+    .input-content:not(.always-show) {
+        display: none;
+    }

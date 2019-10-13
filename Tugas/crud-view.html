@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CRUD IContent+</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/crud-view.css">
+</head>
+<style>
+
+html,
+body,
+nav, 
+div {
+    padding: 0;
+    margin:0;
+    font-family: tahoma; 
+                
+  }
+
+  .sidebar-content,
+        .main-content {
+            min-height: 70vh;
+            padding: 24px;
+            background-color: #f1f4ff;
+        }
+    .sidebar-content {
+        background-color: #f1f4ff;
+        min-width: 150px;
+    }
+    .sidebar-content ul li a {
+        color: #00c7eb !important; 
+    }
+    .sidebar-content h4 {
+            color: #00c7eb;
+            font-weight: 900;
+            margin-bottom: 2rem;
+    }
+    .sidebar-content li{
+        background-color:#00c7eb;
+    }
+
+    .sidebar-content ul li:hover a {
+            color: #00c7eb !important;
+    }
+
+    .sidebar-content .list-group .list-group-item {
+            background-color: transparent;
+            margin-bottom: .5rem;
+            padding: .5rem .75rem;
+    }
+
+    .sidebar-content img{
+            width: 120px;
+            padding: 10px;
+            margin: auto;
+    }
+
+    .container-wrp {
+            margin: 0 -15px;
+    }
+
+  .table{
+    color: #00c7eb;
+  }
+
+  .table th{
+    color: white; 
+    border-color: #00c7eb;
+    text-align: center; 
+  }
+
+  .nav {
+    background-color: #f0faf3;
+    margin: 0;
+  }
+
+  .page-footer {
+    background-color: #00c7eb;
+  }
+
+  .page-footer p{
+    color: white;
+  }
+
+  .page-footer a{
+    color: grey;
+  }
+
+  .container-fluid span img{
+    width: 100px;
+    margin: auto;
+    margin-left: 15px;
+    padding: 5px;
+  
+  }
+
+  .container-fluid h2 span{
+    color: grey;
+  
+  }
+
+</style>
+
+<head>
+    <div class="container-fluid" style="background-color: #00c7eb;">
+        <div class="d-flex">            
+            <h2>
+                <span><img src="create-content.png" alt=""></span>
+              <span>IContent+.com</span>
+            </h2>
+        </div>
+  </div>
+</head>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-2">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Content</li>
+    </ol>
+  </nav>
+
+<body>
+          <div class="container-fluid mt-0 mb-2 shadow">
+              <div class="d-flex container-wrp"> 
+                     <div class="sidebar-content">
+                       <div>
+                          <img  src="icon.png" class="d-flex justify-content-center align-items-center"alt="">
+                          <p class="d-flex justify-content-center align-items-center">
+                            <h4>Wahyu Kurniawan</h4> 
+                          </p>  
+                       </div>
+                             <ul class="list-group">
+                                 <li class="list-group-item border-0">
+                                     <a href="a" class="d-flex align-item-center">
+                                     <span class="mr-2">
+                                         <i class="material-icons">dashboard</i>
+                                     </span>
+                                     Dasboard
+                                     </a>
+                                 </li>
+                                 <li class="list-group-item border-0">
+                                         <a href="a" class="d-flex align-item-center">
+                                         <span class="mr-2">
+                                             <i class="material-icons">note_add</i>
+                                         </span>
+                                         Content
+                                     </a>
+                                 </li>
+                                 <li class="list-group-item border-0">
+                                         <a href="a" class="d-flex align-item-center">
+                                         <span class="mr-2">
+                                             <i class="material-icons">message</i>
+                                         </span>
+                                         Inbox<span class="badge badge-light ml-2 mt-1 mb-2">4</span>
+                                     </a>
+                                 </li>
+                                 <li class="list-group-item border-0">
+                                    <a href="a" class="d-flex align-item-center">
+                                          <span class="mr-2">
+                                              <i class="material-icons">notifications</i>
+                                          </span>
+                                          Notifications<span class="badge badge-light ml-2 mt-1 mb-2">4</span>
+                                    </a>
+                                </li>
+                                 <li class="list-group-item border-0">
+                                         <a href="a" class="d-flex align-item-center">
+                                         <span class="mr-2">
+                                             <i class="material-icons">settings_applications</i>
+                                         </span>
+                                         Settings
+                                     </a>
+                                 </li>
+                                 <li class="list-group-item border-0">
+                                    <a href="a" class="d-flex align-item-center">
+                                    <span class="mr-2">
+                                        <i class="material-icons">highlight_off</i>
+                                    </span>
+                                    Log out
+                                </a>
+                            </li>
+                             </ul>
+                     </div>
+                 
+                  <div class="flex-fill main-content mr-2 ml-2">
+                         <h5 class="mb-4 mr-3 ml-3"> Welcome to IContent+</h5>
+                         <div class="container-fluid">
+
+                            <div class="row">
+                                <div class=" col-4">
+                                    <div class="shadow p-4 mb-4 bg-white rounded">
+                                        <div class="d-flex align-item-center justify-content-center mb-4">
+                                            <h5 class="flex-fill">Content</h5>
+                                            <a class="btn btn-success btn-sm">
+                                                <i class="material-icons text-white">post_add</i>
+                                            </a>
+    
+                                        </div>
+                                        <h2 class="mb-4">32 Content</h2>
+                                        <div class="d-flex align-item-center">
+                                            <i class="material-icons mr-2 text-danger">arrow_downward</i>
+                                            <span>5.27% </span>
+                                            <span> Since Last Month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="col-4">
+                                <div class="shadow p-4 mb-4 bg-white rounded">
+                                    <div class="d-flex align-items-center justify-content-center mb-4">
+                                        <h5 class="flex-fill">Viewers</h5>
+                                        <a class="btn btn-info btn-sm">
+                                            <i class="material-icons mr-2 text-white">people_alt</i>
+                                        </a>
+                                    </div>
+                                    <h2 class="mb-4">250 Viewers</h2>
+                                    <i class="material-icons text-success">arrow_upward</i>
+                                    <span>5.27%</span>
+                                    <span>Since last Month</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="shadow p-4 mb-4 bg-white rounded">
+                                    <div class="d-flex align-items-center justify-content-center mb-4">
+                                        <h5 class="flex-fill">Like</h5>
+                                        <a class="btn btn-primary">
+                                            <i class="material-icons text-white">tag_faces</i>
+                                        </a>
+                                    </div>
+                                    <h2 class="mb-4">250 Likes</h2>
+                                    <div class="d-flex align-item-center">
+                                        <i class="material-icons mr-2 text-success">arrow_upward</i>
+                                        <span>5.27% </span>
+                                        <span>Since last month</span>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                          <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary shadow" type="button" style="justify-content: flex-start;" onclick="addRow()">
+                                    Add
+                                </button>
+                            </div>
+                            <div class="col">
+                                <form class="form-inline mb-4" style="justify-content: flex-end;">
+                                    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-success shadow" type="submit">Search</button>
+                                </form>
+                            </div>
+                          </div>
+                         </div>
+
+
+                  <div class="container-fluid d-flex align-item-center shadow rounded">  
+                      <table class="table table-bordered">
+                        <thead style="background-color: #00c7eb; text-align: center;">
+                          <tr>
+                            <th>Id</th>
+                            <th>Content</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="table-data"></tbody>
+                      </table>
+                  </div>
+                         
+                 </div>
+             </div>
+        </div>
+
+  <script src="js/array-crud.js"></script>
+  <script src="js/array-crud-view-impl.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+<footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-1">
+        <p>Copyright <a href="a">IContent+</a> All Right reserved</p>      
+    </div>
+</footer>
+
+</html>
